@@ -23,10 +23,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source', type=Path, default=ROOT/'build/chat-context-model/run-v4')
     p.add_argument('--output', type=Path, default=ROOT/'build/chat-context-model/run-v4/runtime-flex')
+    p.add_argument('--expected-weights-sha256', default=WEIGHTS, help='Explicit checkpoint hash; defaults to the frozen Red Thunder release')
     args = p.parse_args()
     if args.output.resolve() == (args.source/'exports').resolve():
         raise ValueError('Do not overwrite the frozen export')
-    assert sha(args.source/'trained/model.safetensors') == WEIGHTS
+    weights = sha(args.source/'trained/model.safetensors')
+    if weights != args.expected_weights_sha256:
+        raise ValueError('Checkpoint hash differs from the explicitly selected weights')
     os.environ['HF_HUB_OFFLINE'] = '1'
     os.environ['HF_HUB_DISABLE_TELEMETRY'] = '1'
     import numpy as np
@@ -75,7 +78,7 @@ def main():
     converted.author = 'Red Thunder'
     converted.short_description = 'Frozen contextual recording ranker; flexible masked-padding length.'
     converted.version = 'run-v4-runtime-flex'
-    converted.user_defined_metadata.update({'weightsSHA256':WEIGHTS,'maxLength':'192','optimization':'masked right padding only'})
+    converted.user_defined_metadata.update({'weightsSHA256':weights,'maxLength':'192','optimization':'masked right padding only'})
     converted.save(str(args.output/'McQueenReplyRanker.mlpackage'))
     for name in ['tokenizer','LICENSE-base-model.txt','base-model-card.md','base-provenance.json']:
         src = args.source/'exports'/name; dst = args.output/name
