@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "recorded-reply-v1",
+  "ios": {
+    "url": "https://files.redthunderremote.com/models/chat/recorded-reply-v1/36c0d68e944e63bad48c9365c98ec629057e309e198e9c90c168122e1279dc31/weights.bin",
+    "bytes": 45188160,
+    "sha256": "36c0d68e944e63bad48c9365c98ec629057e309e198e9c90c168122e1279dc31"
+  },
+  "android": {
+    "url": "https://files.redthunderremote.com/models/chat/recorded-reply-v1/873210de93107b8bc1a5df38ea8e9f99aadfe1b6fe6247544b566ef42fede2f0/model.onnx",
+    "bytes": 90962494,
+    "sha256": "873210de93107b8bc1a5df38ea8e9f99aadfe1b6fe6247544b566ef42fede2f0"
+  },
+  "coreML": {
+    "specificationSHA256": "68e0309600247358388ce95808d78a65f8e3f74cb323a4e3aa1e11e6f4a436cf",
+    "packageManifestSHA256": "c8d01fc2fa302e4082002fa06f4307c573ccee549d67cb6576412ee2759074b0"
+  },
+  "revision": 1,
+  "vocabularySHA256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+  "catalogueSHA256": "58b4a73b2d22e7bf901fca326efc0ccd34d2c835c794e3f597eab4fab2a3c62e"
+}

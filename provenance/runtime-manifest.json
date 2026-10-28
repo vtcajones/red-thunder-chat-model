@@ -1,0 +1,47 @@
+{
+  "attentionMaskSubstitutionMaxError": 0.0,
+  "attentionMaskValue": -10000,
+  "batchRange": [
+    1,
+    32
+  ],
+  "catalogueSHA256": "58b4a73b2d22e7bf901fca326efc0ccd34d2c835c794e3f597eab4fab2a3c62e",
+  "contextFormat": "Conversation with Lightning McQueen.\nROLE: text...\nLATEST USER: text\nChoose a suitable recorded reply.",
+  "coremlMaxAbsoluteError": 0.012057960033416748,
+  "datasetSHA256": "ed035f08f09878b421e23907741e3f36d6706efd7642053403dd1e39755cae44",
+  "exporterSHA256": "181dfce28a5599113fc780aba685c99880c74b078f6f40565c3a67d6a8d05f13",
+  "initializerByteParity": true,
+  "initializerParityCount": 105,
+  "inputs": [
+    "input_ids",
+    "attention_mask",
+    "token_type_ids"
+  ],
+  "maxLength": 192,
+  "modelLicense": "Apache-2.0",
+  "noMatchText": "No available recording fits this conversation. Stay quiet.",
+  "noNewTraining": true,
+  "onnxMaxAbsoluteError": 5.364418029785156e-06,
+  "onnxSHA256": "873210de93107b8bc1a5df38ea8e9f99aadfe1b6fe6247544b566ef42fede2f0",
+  "optimization": "remove masked right padding only, after frozen 192-token truncation",
+  "output": "reply_score",
+  "padding": "right",
+  "parityProbeCount": 32,
+  "runtimeExporterSHA256": "3ed39ff80256ba820528accfe0552b326da2303dd3b517cecc683d99006f500f",
+  "schemaVersion": 2,
+  "sourceModel": {
+    "license": "Apache-2.0",
+    "model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "trustRemoteCode": false
+  },
+  "sourceONNXSHA256": "1f5ee982dd6112332b5a6d8c09aa8cda15f5dab912f81c64102937dcf53a1e8b",
+  "truncate": "oldest context first; preserve reply; only_first",
+  "verification": "Frozen iOS package and shape-only Android ONNX; archived parity reports apply to the corresponding exports.",
+  "weightsSHA256": "6224e69ea81c6099eee02a4b34397216376faa8624a33f7f7583f103e5e1f426",
+  "iosSequenceLength": 192,
+  "androidSequenceRange": [
+    1,
+    192
+  ]
+}

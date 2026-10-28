@@ -1,0 +1,6 @@
+torch==2.8.0
+transformers==4.57.1
+coremltools==9.0
+onnx==1.19.1
+onnxruntime==1.23.2
+numpy==1.26.4

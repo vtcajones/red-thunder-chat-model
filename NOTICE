@@ -1,0 +1,10 @@
+Red Thunder recorded-reply model
+Copyright 2026 Red Thunder contributors
+
+Fine-tuned from cross-encoder/ms-marco-MiniLM-L6-v2 by the Sentence Transformers contributors.
+Pinned upstream revision: 233902d25c440f23af6f7d6e94d2946bac0bee0a.
+Upstream model and this repository’s code, synthetic data contributions and fine-tuned weights are provided under Apache-2.0; see LICENSE and provenance/.
+The upstream encoder was fine-tuned and exported for contextual recorded-reply selection. Runtime graph exports change masked-padding shapes without retraining.
+
+SpheroMcQueen/ChatResponses.json is an interoperability reference of toy-recording IDs and draft transcripts, not newly authored character dialogue. Underlying dialogue, character names and trademarks retain their respective ownership; the source license does not grant rights to original recordings, firmware, artwork or trademarks. None of those binaries is distributed here.
+Training histories contain synthetic examples and brief recorded-line references. No customer conversations or microphone recordings are included.

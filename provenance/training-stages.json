@@ -1,0 +1,82 @@
+{
+  "source": "four frozen local training reports",
+  "stages": [
+    {
+      "chosenEpoch": 2,
+      "trainedWeightsSHA256": "b41ed40624727a61ee11cab1b345f51dd07e461c4556d5a39320810af1fb5c26",
+      "datasetSHA256": "6d2262874a7a99ce9364e5532e23e128bca4c14cf5e52c757b986e5676821027",
+      "trainingConversations": 411,
+      "validationConversations": 30,
+      "testConversations": 42,
+      "run": 1,
+      "config": {
+        "command": "train",
+        "conversations_per_batch": 2,
+        "epochs": 4,
+        "learning_rate": 2e-05,
+        "negatives": 20,
+        "seed": 1729
+      }
+    },
+    {
+      "chosenEpoch": 2,
+      "trainedWeightsSHA256": "ff528500a7da1ce0a78602597cec87bbec665305403b9c8889d256bfa655bc19",
+      "datasetSHA256": "6d2262874a7a99ce9364e5532e23e128bca4c14cf5e52c757b986e5676821027",
+      "trainingConversations": 411,
+      "validationConversations": 30,
+      "testConversations": 42,
+      "run": 2,
+      "config": {
+        "command": "train",
+        "conversations_per_batch": 2,
+        "epochs": 6,
+        "hard_negatives": 16,
+        "learning_rate": 1.5e-05,
+        "negatives": 12,
+        "seed": 1729
+      }
+    },
+    {
+      "chosenEpoch": 5,
+      "trainedWeightsSHA256": "214e1439b755e010832bb426a407562433c818e7ed35d00490799e4acc6f8f8f",
+      "datasetSHA256": "1a19b04c54afaabc13144d9e4864c4b8b317a4c38889d6a88a97fefe5af97ecf",
+      "trainingConversations": 1144,
+      "validationConversations": 70,
+      "testConversations": 80,
+      "run": 3,
+      "config": {
+        "command": "train",
+        "conversations_per_batch": 2,
+        "epochs": 6,
+        "hard_negatives": 12,
+        "learning_rate": 1e-05,
+        "negatives": 16,
+        "rejection_weight": 0.5,
+        "seed": 1729,
+        "skip_test": true,
+        "split": "test"
+      }
+    },
+    {
+      "chosenEpoch": 3,
+      "trainedWeightsSHA256": "6224e69ea81c6099eee02a4b34397216376faa8624a33f7f7583f103e5e1f426",
+      "datasetSHA256": "ed035f08f09878b421e23907741e3f36d6706efd7642053403dd1e39755cae44",
+      "trainingConversations": 1459,
+      "validationConversations": 70,
+      "testConversations": 80,
+      "run": 4,
+      "config": {
+        "command": "train",
+        "conversations_per_batch": 2,
+        "epochs": 3,
+        "hard_negatives": 12,
+        "learning_rate": 7.5e-06,
+        "negatives": 16,
+        "rejection_weight": 0.5,
+        "seed": 1729,
+        "skip_test": true,
+        "split": "test"
+      }
+    }
+  ]
+}
